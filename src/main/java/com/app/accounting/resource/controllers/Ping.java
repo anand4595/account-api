@@ -17,10 +17,10 @@ import java.time.LocalDateTime;
 public class Ping {
 
     @GetMapping("/ping")
-    public PingResponse ping(){
+    public PingResponse ping() {
         return PingResponse.builder()
-                .version(Constants.Application.version)
-                .name(Constants.Application.name)
+                .version(Constants.Application.VERSION)
+                .name(Constants.Application.NAME)
                 .time(Timestamp.valueOf(LocalDateTime.now()))
                 .build();
     }
